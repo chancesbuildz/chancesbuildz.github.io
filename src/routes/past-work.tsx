@@ -61,32 +61,27 @@ function PastWorkLayout() {
               className="group relative overflow-hidden rounded-2xl glass hover:shadow-neon transition-all hover:-translate-y-1 duration-300"
             >
               <div className="aspect-video overflow-hidden relative bg-black">
-                {w.video ? (
-                  <video
-                    src={w.video}
-                    poster={w.cover || undefined}
-                    muted
-                    loop
-                    playsInline
-                    autoPlay
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                ) : (
-                  <img
-                    src={w.cover}
-                    alt={w.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                )}
+                <img
+                  src={w.cover}
+                  alt={w.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
                 <div className="absolute top-3 right-3 px-3 py-1 rounded-full glass text-xs uppercase tracking-wider">
                   {w.year}
                 </div>
                 {w.video && (
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full glass text-xs uppercase tracking-wider flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                    Video
-                  </div>
+                  <>
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full glass text-xs uppercase tracking-wider flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                      Video
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="w-16 h-16 rounded-full glass flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span className="text-2xl ml-1">▶</span>
+                      </div>
+                    </div>
+                  </>
                 )}
               </div>
               <div className="p-6">
