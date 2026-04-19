@@ -23,7 +23,7 @@ const contacts = [
   {
     name: "Discord",
     handle: "chanceyayin",
-    href: "https://discord.com/users/chanceyayin",
+    href: "https://discord.com/users/1270008154410717185",
     brand: "#5865F2",
     icon: (
       <svg viewBox="0 0 127.14 96.36" className="w-9 h-9" fill="currentColor" aria-hidden="true">

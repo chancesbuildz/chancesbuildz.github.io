@@ -52,18 +52,24 @@ function PastWorkLayout() {
           and screenshots.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6">
           {works.map((w) => (
             <Link
               key={w.slug}
               to="/past-work/$slug"
               params={{ slug: w.slug }}
-              className="group relative overflow-hidden rounded-2xl glass hover:shadow-neon transition-all hover:-translate-y-1 duration-300"
+              className={`group relative overflow-hidden rounded-2xl glass hover:shadow-neon transition-all hover:-translate-y-1 duration-300 ${
+                w.video ? "sm:col-span-2" : ""
+              }`}
             >
-              <div className="aspect-video overflow-hidden relative bg-black">
+              <div
+                className="overflow-hidden relative bg-black"
+                style={{ aspectRatio: w.video ? "32 / 9" : "16 / 9" }}
+              >
                 {w.video ? (
                   <video
                     src={w.video}
+                    poster={w.cover || undefined}
                     muted
                     loop
                     playsInline
@@ -77,10 +83,16 @@ function PastWorkLayout() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent pointer-events-none" />
-                <div className="absolute top-3 right-3 px-3 py-1 rounded-full glass text-xs uppercase tracking-wider text-neon-cyan">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
+                <div className="absolute top-3 right-3 px-3 py-1 rounded-full glass text-xs uppercase tracking-wider">
                   {w.year}
                 </div>
+                {w.video && (
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full glass text-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                    Video
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-[0.25em] text-neon-pink mb-2">
