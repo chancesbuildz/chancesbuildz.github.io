@@ -82,24 +82,13 @@ function About() {
           </div>
         </div>
 
-        {/* Toolkit */}
+        {/* Toolbox */}
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-glow-green text-neon-green mb-6 uppercase tracking-widest">
-            ◆ Toolkit
+            ◆ Toolbox
           </h2>
-          <div className="flex flex-wrap gap-3">
-            {["Roblox Studio", "Blender", "Substance Painter", "Photoshop", "After Effects", "Figma"].map(
-              (t) => (
-                <span
-                  key={t}
-                  className="px-4 py-2 rounded-full glass border-neon text-sm font-semibold uppercase tracking-wider"
-                >
-                  {t}
-                </span>
-              )
-            )}
-          </div>
-        </div>
+          <div className="flex flex-wrap gap-3 mb-6">
+            {[
       </main>
       <SiteFooter />
     </div>
