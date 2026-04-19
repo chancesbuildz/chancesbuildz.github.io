@@ -7,6 +7,7 @@ import work6 from "@/assets/work-6.png";
 import work7 from "@/assets/work-7.png";
 import work8 from "@/assets/work-8.png";
 import vfxPoster from "@/assets/vfx-poster.jpg";
+import vfxVideo from "@/assets/vfx-showcase.mp4";
 
 export type Work = {
   slug: string;
@@ -57,7 +58,7 @@ export const works: Work[] = [
     ],
     images: [],
     cover: vfxPoster,
-    video: "/vfx-showcase.mp4",
+    video: vfxVideo,
   },
   {
     slug: "pastel-dream-island",
