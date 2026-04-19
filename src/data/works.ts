@@ -58,7 +58,7 @@ export const works: Work[] = [
     ],
     images: [],
     cover: vfxPoster,
-    video: "/vfx-showcase.mp4",
+    video: vfxVideo,
   },
   {
     slug: "pastel-dream-island",
