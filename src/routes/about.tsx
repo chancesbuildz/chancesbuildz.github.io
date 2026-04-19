@@ -87,8 +87,37 @@ function About() {
           <h2 className="text-2xl font-bold text-glow-green text-neon-green mb-6 uppercase tracking-widest">
             ◆ Toolbox
           </h2>
-          <div className="flex flex-wrap gap-3 mb-6">
+          
+          {/* Primary Tools - Blender & Roblox Studio */}
+          <div className="grid sm:grid-cols-2 gap-4 mb-6">
             {[
+              { name: "Blender", tag: "3D Modelling" },
+              { name: "Roblox Studio", tag: "Game Engine" },
+            ].map((tool) => (
+              <div
+                key={tool.name}
+                className="glass rounded-xl p-6 border-neon border border-[oklch(0.75_0.15_200/0.4)] hover:border-[oklch(0.75_0.15_200/0.6)] transition-all hover:-translate-y-1"
+              >
+                <div className="text-sm text-neon-cyan uppercase tracking-wider mb-1">{tool.tag}</div>
+                <div className="text-xl font-bold text-foreground font-[Orbitron]">{tool.name}</div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Secondary Tools */}
+          <div className="flex flex-wrap gap-3">
+            {["Substance Painter", "Photoshop", "After Effects", "Figma"].map(
+              (t) => (
+                <span
+                  key={t}
+                  className="px-4 py-2 rounded-full glass border-neon text-sm font-semibold uppercase tracking-wider"
+                >
+                  {t}
+                </span>
+              )
+            )}
+          </div>
+        </div>
       </main>
       <SiteFooter />
     </div>
