@@ -13,6 +13,7 @@ export type Work = {
   highlights: string[];
   images: string[];
   cover: string;
+  video?: string;
 };
 
 export const works: Work[] = [
