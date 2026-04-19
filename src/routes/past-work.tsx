@@ -60,13 +60,24 @@ function PastWorkLayout() {
               params={{ slug: w.slug }}
               className="group relative overflow-hidden rounded-2xl glass hover:shadow-neon transition-all hover:-translate-y-1 duration-300"
             >
-              <div className="aspect-video overflow-hidden relative">
-                <img
-                  src={w.cover}
-                  alt={w.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              <div className="aspect-video overflow-hidden relative bg-black">
+                {w.video ? (
+                  <video
+                    src={w.video}
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                ) : (
+                  <img
+                    src={w.cover}
+                    alt={w.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent pointer-events-none" />
                 <div className="absolute top-3 right-3 px-3 py-1 rounded-full glass text-xs uppercase tracking-wider text-neon-cyan">
                   {w.year}
                 </div>
