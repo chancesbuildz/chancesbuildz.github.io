@@ -120,8 +120,7 @@ function Pricing() {
               ◆ Payment
             </div>
             <p className="text-sm leading-relaxed">
-              Robux only, at DevEx rates. Example: a $105 map = 30k Robux tax-covered
-              or via group funds.
+              PayPal & Crypto accepted. GMT +4 timezone — responses may vary based on local time.
             </p>
           </div>
           <div className="glass rounded-2xl p-6">
