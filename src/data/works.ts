@@ -2,6 +2,10 @@ import work1 from "@/assets/work-1.png";
 import work2 from "@/assets/work-2.png";
 import work3 from "@/assets/work-3.png";
 import work4 from "@/assets/work-4.png";
+import work5 from "@/assets/work-5.png";
+import work6 from "@/assets/work-6.png";
+import work7 from "@/assets/work-7.png";
+import work8 from "@/assets/work-8.png";
 import vfxPoster from "@/assets/vfx-poster.jpg";
 
 export type Work = {
@@ -54,6 +58,24 @@ export const works: Work[] = [
     images: [],
     cover: vfxPoster,
     video: "/vfx-showcase.mp4",
+  },
+  {
+    slug: "pastel-dream-island",
+    title: "Pastel Dream Island",
+    category: "Stylized Map Build",
+    year: "2025",
+    role: "Modeller & Builder",
+    description:
+      "A soft pastel floating island with low-poly trees, mushrooms, a flowing river, waterfalls and a candy-pink cottage tucked into the woods. Designed as a cozy social hub with a dreamy sunset sky and stylized particle ambience.",
+    highlights: [
+      "Hand-built low-poly nature pack",
+      "Custom waterfall + river mesh setup",
+      "Pastel cottage with detailed interior props",
+      "Cozy lantern-lit forest paths",
+      "Soft sunset lighting + sky preset",
+    ],
+    images: [work5, work6, work7, work8],
+    cover: work5,
   },
 ];
 

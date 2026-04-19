@@ -58,14 +58,9 @@ function PastWorkLayout() {
               key={w.slug}
               to="/past-work/$slug"
               params={{ slug: w.slug }}
-              className={`group relative overflow-hidden rounded-2xl glass hover:shadow-neon transition-all hover:-translate-y-1 duration-300 ${
-                w.video ? "sm:col-span-2" : ""
-              }`}
+              className="group relative overflow-hidden rounded-2xl glass hover:shadow-neon transition-all hover:-translate-y-1 duration-300"
             >
-              <div
-                className="overflow-hidden relative bg-black"
-                style={{ aspectRatio: w.video ? "32 / 9" : "16 / 9" }}
-              >
+              <div className="aspect-video overflow-hidden relative bg-black">
                 {w.video ? (
                   <video
                     src={w.video}
