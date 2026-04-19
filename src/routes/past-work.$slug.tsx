@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useState } from "react";
 import { getWork, works, type Work } from "@/data/works";
 
 export const Route = createFileRoute("/past-work/$slug")({
