@@ -41,7 +41,7 @@ export const Route = createFileRoute("/past-work/$slug")({
 });
 
 function WorkDetail() {
-  const { work } = Route.useLoaderData();
+  const { work } = Route.useLoaderData() as { work: Work };
   const others = works.filter((w) => w.slug !== work.slug).slice(0, 3);
 
   return (
