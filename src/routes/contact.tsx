@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, SiteFooter } from "@/components/SiteNav";
-import robloxLogo from "@/assets/roblox-logo.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
