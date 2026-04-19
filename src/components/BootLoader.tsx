@@ -3,22 +3,26 @@ import { useEffect, useState } from "react";
 const STORAGE_KEY = "cs-loaded-session";
 
 export function BootLoader({ children }: { children: React.ReactNode }) {
-  // Show loader on every fresh visit / refresh, not on client-side route changes
-  const [done, setDone] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return sessionStorage.getItem(STORAGE_KEY) === "1";
-  });
+  // Always start the same on server + client to avoid hydration mismatch.
+  // Then on mount, check sessionStorage and either skip or start the loader.
+  const [done, setDone] = useState(true);
+  const [active, setActive] = useState(false);
   const [progress, setProgress] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    if (done) return;
+    if (sessionStorage.getItem(STORAGE_KEY) === "1") return;
+    setDone(false);
+    setActive(true);
+  }, []);
+
+  useEffect(() => {
+    if (!active) return;
     const start = performance.now();
-    const duration = 1800; // ~1.8s
+    const duration = 1800;
     let raf = 0;
     const tick = (now: number) => {
       const t = Math.min(1, (now - start) / duration);
-      // ease-out cubic
       const eased = 1 - Math.pow(1 - t, 3);
       setProgress(eased * 100);
       if (t < 1) raf = requestAnimationFrame(tick);
@@ -32,7 +36,7 @@ export function BootLoader({ children }: { children: React.ReactNode }) {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [done]);
+  }, [active]);
 
   return (
     <>
