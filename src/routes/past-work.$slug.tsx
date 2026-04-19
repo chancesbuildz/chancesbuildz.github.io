@@ -73,22 +73,24 @@ function WorkDetail() {
       </div>
 
       {/* Hero media */}
-      <div className="rounded-2xl overflow-hidden glass mb-6 shadow-neon">
-        {work.video ? (
-          <video
-            src={work.video}
-            poster={work.cover}
-            controls
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-auto bg-black"
-          />
-        ) : (
-          <img src={work.cover} alt={work.title} className="w-full h-auto" />
-        )}
-      </div>
+      {(work.video || work.cover) && (
+        <div className="rounded-2xl overflow-hidden glass mb-6 shadow-neon">
+          {work.video ? (
+            <video
+              src={work.video}
+              poster={work.cover || undefined}
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto bg-black"
+            />
+          ) : (
+            <img src={work.cover} alt={work.title} className="w-full h-auto" />
+          )}
+        </div>
+      )}
 
       {/* Highlights */}
       <div className="glass rounded-2xl p-8 mb-10">
@@ -137,12 +139,16 @@ function WorkDetail() {
               params={{ slug: w.slug }}
               className="group glass rounded-xl overflow-hidden hover:shadow-neon transition-all"
             >
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={w.cover}
-                  alt={w.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="aspect-video overflow-hidden bg-black">
+                {w.video ? (
+                  <video src={w.video} muted loop playsInline autoPlay className="w-full h-full object-cover" />
+                ) : (
+                  <img
+                    src={w.cover}
+                    alt={w.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                )}
               </div>
               <div className="p-4">
                 <div className="font-[Orbitron] font-bold text-sm">{w.title}</div>
