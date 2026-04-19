@@ -72,9 +72,22 @@ function WorkDetail() {
         </div>
       </div>
 
-      {/* Hero image */}
+      {/* Hero media */}
       <div className="rounded-2xl overflow-hidden glass mb-6 shadow-neon">
-        <img src={work.cover} alt={work.title} className="w-full h-auto" />
+        {work.video ? (
+          <video
+            src={work.video}
+            poster={work.cover}
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-auto bg-black"
+          />
+        ) : (
+          <img src={work.cover} alt={work.title} className="w-full h-auto" />
+        )}
       </div>
 
       {/* Highlights */}

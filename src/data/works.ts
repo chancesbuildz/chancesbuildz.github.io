@@ -13,6 +13,7 @@ export type Work = {
   highlights: string[];
   images: string[];
   cover: string;
+  video?: string;
 };
 
 export const works: Work[] = [
@@ -83,6 +84,24 @@ export const works: Work[] = [
     ],
     images: [work4, work1, work2],
     cover: work4,
+  },
+  {
+    slug: "vfx-showcase-reel",
+    title: "VFX Showcase Reel",
+    category: "VFX",
+    year: "2026",
+    role: "VFX Artist",
+    description:
+      "A live-captured reel of in-engine Roblox VFX work — combat hits, elemental bursts, ability casts and ambient particle systems. Built entirely in Roblox Studio with a mix of meshes, beams, particles and TweenService-driven animation.",
+    highlights: [
+      "Mesh + particle hybrid effects",
+      "Performance-tuned for mobile clients",
+      "Reusable VFX module structure",
+      "Color-graded for stylized projects",
+    ],
+    images: [work3, work4],
+    cover: work4,
+    video: "/vfx-showcase.mp4",
   },
 ];
 

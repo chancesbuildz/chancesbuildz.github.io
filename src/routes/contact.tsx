@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, SiteFooter } from "@/components/SiteNav";
+import robloxLogo from "@/assets/roblox-logo.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -38,10 +39,7 @@ const contacts = [
     href: "https://www.roblox.com/users/profile",
     brand: "#FFFFFF",
     icon: (
-      // Official Roblox tilted square mark
-      <svg viewBox="0 0 32 32" className="w-9 h-9" fill="currentColor" aria-hidden="true">
-        <path d="M5.5 2 2 25.5 25.5 30 30 6.5 5.5 2Zm10.65 14.32-1.06 5.42-5.43-1.06 1.07-5.42 5.42 1.06Z" />
-      </svg>
+      <img src={robloxLogo} alt="Roblox" className="w-11 h-11 rounded-lg" />
     ),
   },
 ] as const;
