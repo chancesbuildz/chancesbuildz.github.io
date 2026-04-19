@@ -28,8 +28,8 @@ function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative max-w-7xl mx-auto px-6 pt-20 pb-24 text-center">
-          <div className="inline-block px-4 py-1.5 rounded-full glass text-xs uppercase tracking-[0.3em] text-neon-cyan mb-8">
-            ◆ Roblox Studio Specialist ◆
+          <div className="inline-block px-4 py-1.5 rounded-full glass text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8 accent-dot">
+            Roblox Studio · Est. 2026
           </div>
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black text-glow-cyan leading-tight">
             CHANGE'S
