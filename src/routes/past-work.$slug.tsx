@@ -189,14 +189,3 @@ function Info({ label, value }: { label: string; value: string }) {
     </div>
   );
 }
-
-function Info({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-1">
-        {label}
-      </div>
-      <div className="font-semibold text-neon-cyan">{value}</div>
-    </div>
-  );
-}
