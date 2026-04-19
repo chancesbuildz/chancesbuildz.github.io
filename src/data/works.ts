@@ -2,6 +2,7 @@ import work1 from "@/assets/work-1.png";
 import work2 from "@/assets/work-2.png";
 import work3 from "@/assets/work-3.png";
 import work4 from "@/assets/work-4.png";
+import vfxPoster from "@/assets/vfx-poster.jpg";
 
 export type Work = {
   slug: string;
@@ -51,7 +52,7 @@ export const works: Work[] = [
       "Color-graded for stylized projects",
     ],
     images: [],
-    cover: "",
+    cover: vfxPoster,
     video: "/vfx-showcase.mp4",
   },
 ];
