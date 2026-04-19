@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 
-const STORAGE_KEY = "cs-loaded-session";
-
 export function BootLoader({ children }: { children: React.ReactNode }) {
   // Always start the same on server + client to avoid hydration mismatch.
-  // Then on mount, check sessionStorage and either skip or start the loader.
+  // Then on mount, start the loader. Shows on every hard refresh / first visit.
   const [done, setDone] = useState(true);
   const [active, setActive] = useState(false);
   const [progress, setProgress] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY) === "1") return;
+    // Use a window-level flag so client-side route changes don't re-trigger,
+    // but a real page refresh always shows the loader.
+    const w = window as unknown as { __csBooted?: boolean };
+    if (w.__csBooted) return;
+    w.__csBooted = true;
     setDone(false);
     setActive(true);
   }, []);
@@ -29,7 +31,6 @@ export function BootLoader({ children }: { children: React.ReactNode }) {
       else {
         setFadeOut(true);
         setTimeout(() => {
-          sessionStorage.setItem(STORAGE_KEY, "1");
           setDone(true);
         }, 500);
       }
