@@ -50,8 +50,8 @@ export const works: Work[] = [
       "Reusable VFX module structure",
       "Color-graded for stylized projects",
     ],
-    images: [work4, work3],
-    cover: work4,
+    images: [],
+    cover: "",
     video: "/vfx-showcase.mp4",
   },
 ];
