@@ -24,10 +24,11 @@ const contacts = [
     name: "Discord",
     handle: "changesstudios",
     href: "https://discord.com/users/changesstudios",
-    color: "cyan",
+    brand: "#5865F2",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="currentColor">
-        <path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3a14.7 14.7 0 0 0-.617 1.265 18.27 18.27 0 0 0-5.487 0A12.6 12.6 0 0 0 9.838 3 19.74 19.74 0 0 0 6.077 4.371C2.59 9.498 1.658 14.49 2.124 19.41a19.94 19.94 0 0 0 5.993 3.029 14.6 14.6 0 0 0 1.279-2.07 12.85 12.85 0 0 1-2.014-.964c.169-.123.335-.252.494-.385 3.901 1.797 8.122 1.797 11.974 0 .161.133.327.262.494.385a12.85 12.85 0 0 1-2.018.965 14.4 14.4 0 0 0 1.28 2.069 19.93 19.93 0 0 0 5.997-3.03c.55-5.708-.94-10.658-3.946-15.04ZM8.68 16.4c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.953-2.428 2.156-2.428 1.21 0 2.176 1.103 2.158 2.428 0 1.334-.955 2.42-2.157 2.42Zm7.974 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.952-2.428 2.156-2.428 1.21 0 2.175 1.103 2.157 2.428 0 1.334-.946 2.42-2.156 2.42Z" />
+      // Official Discord 2024+ mark
+      <svg viewBox="0 0 127.14 96.36" className="w-9 h-9" fill="currentColor" aria-hidden="true">
+        <path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2.05a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2.05a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69c-6.27 0-11.45-5.69-11.45-12.69s5-12.74 11.43-12.74S54 46 53.88 53s-5.05 12.69-11.43 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z" />
       </svg>
     ),
   },
@@ -35,33 +36,11 @@ const contacts = [
     name: "Roblox",
     handle: "ChangesStudios",
     href: "https://www.roblox.com/users/profile",
-    color: "pink",
+    brand: "#FFFFFF",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="currentColor">
-        <path d="M3.5 3 21 7.5 16.5 21 0 16.5 3.5 3Zm6.36 7.86 1.93 6.34 6.35-1.93-1.93-6.35-6.35 1.94Z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Twitter / X",
-    handle: "@changesstudios",
-    href: "https://twitter.com/changesstudios",
-    color: "green",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="currentColor">
-        <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.93l-5.4-7.06L4.5 22H1.24l8.04-9.18L1 2h7.07l4.88 6.45L18.24 2Zm-1.22 18h1.91L7.05 4H5.04l11.98 16Z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Email",
-    handle: "hire@changesstudios.dev",
-    href: "mailto:hire@changesstudios.dev",
-    color: "cyan",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={2}>
-        <rect x="3" y="5" width="18" height="14" rx="2" />
-        <path d="m3 7 9 6 9-6" />
+      // Official Roblox tilted square mark
+      <svg viewBox="0 0 32 32" className="w-9 h-9" fill="currentColor" aria-hidden="true">
+        <path d="M5.5 2 2 25.5 25.5 30 30 6.5 5.5 2Zm10.65 14.32-1.06 5.42-5.43-1.06 1.07-5.42 5.42 1.06Z" />
       </svg>
     ),
   },
@@ -72,10 +51,10 @@ function Contact() {
     <div className="min-h-screen flex flex-col">
       <SiteNav />
       <main className="flex-1 max-w-5xl mx-auto px-6 pt-16 pb-12 w-full">
-        <div className="text-xs uppercase tracking-[0.3em] text-neon-pink mb-3">
+        <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">
           ◆ Get In Touch
         </div>
-        <h1 className="text-5xl md:text-6xl font-black text-glow-cyan mb-4">
+        <h1 className="text-5xl md:text-6xl font-black mb-4">
           Contact Me
         </h1>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl">
@@ -90,10 +69,11 @@ function Contact() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group glass rounded-2xl p-6 flex items-center gap-5 hover:-translate-y-1 transition-all duration-300 hover:shadow-${c.color === "cyan" ? "neon" : c.color}`}
+              className="group glass rounded-2xl p-6 flex items-center gap-5 hover:-translate-y-1 transition-all duration-300 hover:border-[oklch(0.82_0.18_200/0.6)]"
             >
               <div
-                className={`w-16 h-16 rounded-xl flex items-center justify-center bg-[oklch(0.82_0.18_200/0.1)] text-neon-${c.color} text-glow-${c.color} group-hover:scale-110 transition-transform`}
+                className="w-16 h-16 rounded-xl flex items-center justify-center bg-[oklch(0.22_0.05_265)] group-hover:scale-110 transition-transform"
+                style={{ color: c.brand }}
               >
                 {c.icon}
               </div>
@@ -102,17 +82,17 @@ function Contact() {
                   Reach me on
                 </div>
                 <div className="font-[Orbitron] font-bold text-xl">{c.name}</div>
-                <div className={`text-sm text-neon-${c.color} truncate`}>{c.handle}</div>
+                <div className="text-sm text-muted-foreground truncate">{c.handle}</div>
               </div>
-              <div className="text-2xl text-neon-cyan group-hover:translate-x-1 transition-transform">
+              <div className="text-2xl text-muted-foreground group-hover:translate-x-1 group-hover:text-foreground transition-all">
                 →
               </div>
             </a>
           ))}
         </div>
 
-        <div className="mt-12 glass rounded-2xl p-8 border-neon">
-          <h2 className="font-[Orbitron] text-xl font-bold text-glow-green text-neon-green mb-3 uppercase tracking-widest">
+        <div className="mt-12 glass rounded-2xl p-8">
+          <h2 className="font-[Orbitron] text-xl font-bold mb-3 uppercase tracking-widest">
             ◆ Commission Info
           </h2>
           <ul className="space-y-2 text-muted-foreground">
