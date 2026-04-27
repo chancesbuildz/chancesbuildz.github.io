@@ -22,8 +22,8 @@ export const Route = createFileRoute("/contact")({
 const contacts = [
   {
     name: "Discord",
-    handle: "chanceyayin",
-    href: "https://discord.com/users/1270008154410717185",
+    handle: "Join the server",
+    href: "https://discord.gg/RCeJBrCr7d",
     brand: "#5865F2",
     icon: (
       <svg viewBox="0 0 127.14 96.36" className="w-9 h-9" fill="currentColor" aria-hidden="true">
