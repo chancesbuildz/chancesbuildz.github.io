@@ -70,7 +70,7 @@ export function BootLoader({ children }: { children: React.ReactNode }) {
             </div>
 
             <div className="font-[Orbitron] text-2xl font-black tracking-[0.3em] mb-2">
-              CHANGE'S STUDIOS
+              CHANCE'S STUDIOS
             </div>
             <div className="text-xs uppercase tracking-[0.4em] text-muted-foreground mb-8">
               Initializing Workspace

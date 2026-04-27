@@ -4,15 +4,15 @@ import { SiteNav, SiteFooter } from "@/components/SiteNav";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Change's Studios" },
+      { title: "Contact — Chance's Studios" },
       {
         name: "description",
-        content: "Get in touch with Change's Studios for Roblox modelling, building and VFX commissions.",
+        content: "Get in touch with Chance's Studios for Roblox modelling, building and VFX commissions.",
       },
-      { property: "og:title", content: "Contact — Change's Studios" },
+      { property: "og:title", content: "Contact — Chance's Studios" },
       {
         property: "og:description",
-        content: "Hire Change's Studios for your next Roblox project.",
+        content: "Hire Chance's Studios for your next Roblox project.",
       },
     ],
   }),

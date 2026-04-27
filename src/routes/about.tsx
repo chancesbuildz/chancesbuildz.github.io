@@ -4,16 +4,16 @@ import { SiteNav, SiteFooter } from "@/components/SiteNav";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Change's Studios" },
+      { title: "About — Chance's Studios" },
       {
         name: "description",
         content:
-          "About Change's Studios — Roblox Modeller, Builder, and VFX Artist with years of experience building neon worlds.",
+          "About Chance's Studios — Roblox Modeller, Builder, and VFX Artist with years of experience building neon worlds.",
       },
-      { property: "og:title", content: "About — Change's Studios" },
+      { property: "og:title", content: "About — Chance's Studios" },
       {
         property: "og:description",
-        content: "Meet the developer behind Change's Studios.",
+        content: "Meet the developer behind Chance's Studios.",
       },
     ],
   }),
@@ -42,7 +42,7 @@ function About() {
         <div className="glass rounded-2xl p-8 md:p-10 space-y-5 text-lg leading-relaxed">
           <p>
             Hey — I'm <span className="text-neon-cyan font-semibold">Change</span>, the
-            solo developer behind Change's Studios. I specialize in crafting striking,
+            solo developer behind Chance's Studios. I specialize in crafting striking,
             high-performance environments and visual effects for Roblox experiences.
           </p>
           <p>

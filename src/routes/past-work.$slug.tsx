@@ -10,12 +10,12 @@ export const Route = createFileRoute("/past-work/$slug")({
   },
   head: ({ loaderData }) => {
     const w = loaderData?.work;
-    if (!w) return { meta: [{ title: "Project — Change's Studios" }] };
+    if (!w) return { meta: [{ title: "Project — Chance's Studios" }] };
     return {
       meta: [
-        { title: `${w.title} — Change's Studios` },
+        { title: `${w.title} — Chance's Studios` },
         { name: "description", content: w.description },
-        { property: "og:title", content: `${w.title} — Change's Studios` },
+        { property: "og:title", content: `${w.title} — Chance's Studios` },
         { property: "og:description", content: w.description },
         { property: "og:image", content: w.cover },
         { name: "twitter:image", content: w.cover },
