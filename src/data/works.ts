@@ -8,6 +8,13 @@ import work7 from "@/assets/work-7.png";
 import work8 from "@/assets/work-8.png";
 import work9 from "@/assets/work-9.png";
 import work10 from "@/assets/work-10.png";
+import work11 from "@/assets/work-11.png";
+import work12 from "@/assets/work-12.png";
+import work13 from "@/assets/work-13.png";
+import work14 from "@/assets/work-14.png";
+import work15 from "@/assets/work-15.png";
+import work16 from "@/assets/work-16.png";
+import work17 from "@/assets/work-17.png";
 import vfxPoster from "@/assets/vfx-poster.jpg";
 import vfxVideo from "@/assets/vfx-showcase.mp4";
 
@@ -98,6 +105,25 @@ export const works: Work[] = [
     ],
     images: [work9, work10],
     cover: work9,
+  },
+  {
+    slug: "voxel-biome-archipelago",
+    title: "Voxel Biome Archipelago",
+    category: "Map · Voxel Build",
+    year: "2025",
+    role: "Lead Builder",
+    description:
+      "A massive voxel-style theme-park archipelago — a connected network of biome islands linked by sweeping rollercoaster rails. Tropical beaches and lighthouses, a cozy red-roofed farming village, a sun-bleached desert oasis, a volcanic lava isle and a snowy royal castle island. Built block-by-block in a clean stylized voxel aesthetic with a unified color language across every biome.",
+    highlights: [
+      "5 distinct biome islands (beach, village, desert, lava, snow castle)",
+      "Cross-map rollercoaster rail network",
+      "Voxel lighthouse, windmill cottages & royal castle towers",
+      "Lava-cracked volcanic terrain with glowing seams",
+      "Tropical palm + cactus + pine voxel asset packs",
+      "Clean stylized skybox + water shader setup",
+    ],
+    images: [work17, work11, work12, work13, work14, work15, work16],
+    cover: work17,
   },
 ];
 
