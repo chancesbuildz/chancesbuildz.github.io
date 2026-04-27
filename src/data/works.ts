@@ -6,6 +6,8 @@ import work5 from "@/assets/work-5.png";
 import work6 from "@/assets/work-6.png";
 import work7 from "@/assets/work-7.png";
 import work8 from "@/assets/work-8.png";
+import work9 from "@/assets/work-9.png";
+import work10 from "@/assets/work-10.png";
 import vfxPoster from "@/assets/vfx-poster.jpg";
 import vfxVideo from "@/assets/vfx-showcase.mp4";
 
@@ -77,6 +79,25 @@ export const works: Work[] = [
     ],
     images: [work5, work6, work7, work8],
     cover: work5,
+  },
+  {
+    slug: "mystic-trait-grove",
+    title: "Mystic Trait Grove",
+    category: "Map · Build · VFX",
+    year: "2025",
+    role: "Builder & VFX Artist",
+    description:
+      "A glowing nighttime grove built around a centerpiece 'Trait Machine' arcade and a giant floating mystery-block beacon. Lantern-lit stone paths wind through low-poly forests dotted with collectible glowing cubes, pedestal shrines and bursting particle bursts — designed as a high-energy lobby hub.",
+    highlights: [
+      "Custom 'Trait Machine' arcade prop",
+      "Floating mystery-block beacon with burst VFX",
+      "Glowing collectible cube props (multi-color)",
+      "Lantern-lit stone path system",
+      "Stylized starry-night skybox & ambient particles",
+      "Pedestal shrines + flower scatter pack",
+    ],
+    images: [work9, work10],
+    cover: work9,
   },
 ];
 

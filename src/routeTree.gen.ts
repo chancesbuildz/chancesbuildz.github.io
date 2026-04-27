@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TosRouteImport } from './routes/tos'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PastWorkRouteImport } from './routes/past-work'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -16,6 +17,11 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PastWorkSlugRouteImport } from './routes/past-work.$slug'
 
+const TosRoute = TosRouteImport.update({
+  id: '/tos',
+  path: '/tos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/past-work': typeof PastWorkRouteWithChildren
   '/pricing': typeof PricingRoute
+  '/tos': typeof TosRoute
   '/past-work/$slug': typeof PastWorkSlugRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/past-work': typeof PastWorkRouteWithChildren
   '/pricing': typeof PricingRoute
+  '/tos': typeof TosRoute
   '/past-work/$slug': typeof PastWorkSlugRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/past-work': typeof PastWorkRouteWithChildren
   '/pricing': typeof PricingRoute
+  '/tos': typeof TosRoute
   '/past-work/$slug': typeof PastWorkSlugRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/past-work'
     | '/pricing'
+    | '/tos'
     | '/past-work/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/past-work'
     | '/pricing'
+    | '/tos'
     | '/past-work/$slug'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/past-work'
     | '/pricing'
+    | '/tos'
     | '/past-work/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -105,10 +117,18 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PastWorkRoute: typeof PastWorkRouteWithChildren
   PricingRoute: typeof PricingRoute
+  TosRoute: typeof TosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tos': {
+      id: '/tos'
+      path: '/tos'
+      fullPath: '/tos'
+      preLoaderRoute: typeof TosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pricing': {
       id: '/pricing'
       path: '/pricing'
@@ -172,6 +192,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PastWorkRoute: PastWorkRouteWithChildren,
   PricingRoute: PricingRoute,
+  TosRoute: TosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
