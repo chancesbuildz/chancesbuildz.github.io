@@ -18,7 +18,7 @@ export function SiteNav() {
             C
           </div>
           <span className="font-[Orbitron] font-bold text-lg tracking-widest text-glow-cyan">
-            CHANGE'S STUDIOS
+            CHANCE'S STUDIOS
           </span>
         </Link>
         <nav className="flex gap-1 sm:gap-2">
@@ -41,7 +41,7 @@ export function SiteNav() {
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-[oklch(0.82_0.18_200/0.2)] py-8 text-center text-sm text-muted-foreground">
-      <div className="font-[Orbitron] tracking-widest text-neon-cyan">CHANGE'S STUDIOS</div>
+      <div className="font-[Orbitron] tracking-widest text-neon-cyan">CHANCE'S STUDIOS</div>
       <div className="mt-2">© {new Date().getFullYear()} — Roblox Modeller · Builder · VFX Artist</div>
     </footer>
   );

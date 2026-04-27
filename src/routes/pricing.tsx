@@ -4,13 +4,13 @@ import { SiteNav, SiteFooter } from "@/components/SiteNav";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Change's Studios" },
+      { title: "Pricing — Chance's Studios" },
       {
         name: "description",
         content:
-          "Pricing for Roblox models, weapons, VFX and full maps by Change's Studios.",
+          "Pricing for Roblox models, weapons, VFX and full maps by Chance's Studios.",
       },
-      { property: "og:title", content: "Pricing — Change's Studios" },
+      { property: "og:title", content: "Pricing — Chance's Studios" },
       {
         property: "og:description",
         content: "Transparent rates for Roblox modelling, building and VFX.",

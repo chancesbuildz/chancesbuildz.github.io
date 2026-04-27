@@ -5,13 +5,13 @@ import { works } from "@/data/works";
 export const Route = createFileRoute("/past-work")({
   head: () => ({
     meta: [
-      { title: "Past Work — Change's Studios" },
+      { title: "Past Work — Chance's Studios" },
       {
         name: "description",
         content:
-          "Browse past Roblox builds, models and VFX projects from Change's Studios.",
+          "Browse past Roblox builds, models and VFX projects from Chance's Studios.",
       },
-      { property: "og:title", content: "Past Work — Change's Studios" },
+      { property: "og:title", content: "Past Work — Chance's Studios" },
       {
         property: "og:description",
         content: "Roblox builds, models and VFX showcases.",

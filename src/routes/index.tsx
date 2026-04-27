@@ -5,13 +5,13 @@ import { works } from "@/data/works";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Change's Studios — Roblox Modeller, Builder & VFX Artist" },
+      { title: "Chance's Studios — Roblox Modeller, Builder & VFX Artist" },
       {
         name: "description",
         content:
-          "Portfolio of Change's Studios — advanced Roblox Studio modelling, building and VFX work for top-tier experiences.",
+          "Portfolio of Chance's Studios — advanced Roblox Studio modelling, building and VFX work for top-tier experiences.",
       },
-      { property: "og:title", content: "Change's Studios — Roblox Developer Portfolio" },
+      { property: "og:title", content: "Chance's Studios — Roblox Developer Portfolio" },
       {
         property: "og:description",
         content: "Modeller · Builder · VFX Artist for Roblox Studio.",
@@ -32,7 +32,7 @@ function Home() {
             Roblox Studio · GMT +4
           </div>
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black text-glow-cyan leading-tight">
-            CHANGE'S
+            CHANCE'S
             <br />
             <span className="text-glow-pink text-neon-pink">STUDIOS</span>
           </h1>
